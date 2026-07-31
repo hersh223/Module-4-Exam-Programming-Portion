@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/herschelmarcus/Desktop/Module-4-Exam-Programming-Portion",
+      "program": "/Users/herschelmarcus/Desktop/Module-4-Exam-Programming-Portion/build/Debug/outDebug"
+    }
+  ]
+}
