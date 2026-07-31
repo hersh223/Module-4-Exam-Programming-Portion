@@ -6,13 +6,13 @@ using namespace std;
 
 class Manager : public Role {
 private:
-    string department;
+    string department; // The specific department managed
 
 public:
-    Manager(const string& dept = "Engineering");
+    Manager(const string& dept = "Engineering"); // Constructor setting department
 
     string getDepartment() const;
     void setDepartment(const string& dept);
 
-    void performTask() override;
+    void performTask() override; // Override base performTask to handle Manager workflow
 };

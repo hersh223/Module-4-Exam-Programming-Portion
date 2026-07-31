@@ -5,18 +5,18 @@
 
 using namespace std;
 
+// Derived class representing a Developer role
 class Developer : public Role{
 
     private:
-        vector<string> languages;
+        vector<string> languages; // List of programming languages available to the developer
         string selectLanguage();
 
      public:
         Developer();
-        Developer(const vector<string>& languages);
-
-        void writeCode(const string& language);
-        void performTask() override;
+        Developer(const vector<string>& languages); // custom language list constructor
+        void writeCode(const string& language);// Output specific for coding activity
+        void performTask() override; // Override base performTask to handle Developer workflow
 
     
 

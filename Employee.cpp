@@ -4,7 +4,7 @@
 using namespace std;
 
 
-Employee::Employee () : name(""), role(nullptr) {}
+Employee::Employee () : name(""), role(nullptr) {}// Default state
 
 Employee::Employee(const string& name, Role* role) : name(name), role(role) {}
 
@@ -13,7 +13,7 @@ string Employee::getName() const {
 }
 
 void Employee::setName(const string& name) {
-    this->name = name;
+    this->name = name; // Set employee name
 }
 
 Role* Employee::getRole() const {
@@ -21,13 +21,14 @@ Role* Employee::getRole() const {
 }
 
 void Employee::setRole(Role* role) {
-    this->role = role;
+    this->role = role; // Set role pointer
 }
 
-void Employee::work() {
+// Delegate work to the assigned role via dynamic dispatch
+void Employee::work() { 
     cout << name;
     if (role) {
-        role->performTask();
+        role->performTask(); // Polymorphic function call
     } else {
         cout << " has no assigned role." << endl;
     }
